@@ -1,0 +1,17 @@
+<em-navbar-dashboard/>
+
+<div class="container" ng-if="$ctrl.activeTab === 1">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <em-people-tab-dashboard/>
+        </div>
+    </div>
+</div>
+
+<div class="container" ng-if="$ctrl.activeTab === 2">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <em-visuals-tab-dashboard/>
+        </div>
+    </div>
+</div>

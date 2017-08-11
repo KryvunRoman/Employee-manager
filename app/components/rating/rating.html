@@ -1,0 +1,4 @@
+<i ng-repeat="i in $ctrl.getNumber($ctrl.number) track by $index"
+   ng-class="{'glyphicon-star-empty': $ctrl.currentRate < $index+1, 'glyphicon-star': $ctrl.currentRate >= $index+1}"
+   aria-hidden="true" class="glyphicon rating-icon">
+</i>

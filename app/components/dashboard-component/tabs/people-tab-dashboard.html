@@ -1,0 +1,45 @@
+<section>
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="panel-heading form-group">People tab</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3 pull-right-lg form-group">
+
+            <em-button btn-type="btn-primary"
+                       class="pull-right-lg"
+                       icon-type="add"
+                       label="Add employee"
+                       type="button"
+                       ng-click="$ctrl.openAddModal()">
+            </em-button>
+        </div>
+
+        <div class="col-lg-9">
+            <em-table-people eployees-list="$ctrl.employeesList"
+                             edit-modal-id="$ctrl.editModelId"
+                             delete-modal-id="$ctrl.deleteModelId"
+                             open-update-modal="$ctrl.openUpdateModal(employee)"
+                             search-string="$ctrl.searchValue">
+            </em-table-people>
+        </div>
+    </div>
+
+
+    <em-modal-update-employee modal-id="$ctrl.addModelId"
+                              title="'Add employee'"
+                              tmp-employee-data="$ctrl.eployeeToCreateData"
+                              on-sybmit-handler="$ctrl.addNewNewEmployee">
+    </em-modal-update-employee>
+
+    <em-modal-update-employee modal-id="$ctrl.editModelId"
+                              title="'Edit employee'"
+                              tmp-employee-data="$ctrl.eployeeToEditData"
+                              on-sybmit-handler="$ctrl.editEmployee">
+    </em-modal-update-employee>
+
+    <em-modal-delete-employee modal-id="$ctrl.deleteModelId"/>
+
+</section>

@@ -1,0 +1,90 @@
+<div class="row">
+    <div id="{{$ctrl.modalId}}" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-content">
+
+                    <form class="modal-form panel-danger" name="addEmployeeModalForm" ng-submit="$ctrl.sybmitHandler()">
+                        <div class="modal-header">
+                            <h4>{{$ctrl.title}}</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label for="name-{{$id}}">Name:</label>
+                                    <input type="text" class="form-control" id="name-{{$id}}"
+                                           ng-model="$ctrl.tmpEmployeeData.name" placeholder="Name" required>
+                                </div>
+
+                                <div class="col-md-6 form-group">
+                                    <label for="age-{{$id}}">Age:</label>
+                                    <input type="number" class="form-control" id="age-{{$id}}"
+                                           ng-model="$ctrl.tmpEmployeeData.age" min="18" max="100" placeholder="Age"
+                                           required>
+                                </div>
+
+                                <div class="col-sm-6 form-group">
+                                    <label>Skill:</label>
+
+                                    <div class="dropdown">
+                                        <button class="btn btn-default btn-block dropdown-toggle" type="button"
+                                                data-toggle="dropdown">
+                                            <div class="text-right">
+                                                <span class="pull-left">{{$ctrl.tmpEmployeeData.skill || 'Please select'}}</span>
+                                                <span class="caret"></span>
+                                            </div>
+                                        </button>
+
+                                        <ul class="dropdown-menu btn-block">
+                                            <li ng-repeat="skill in $ctrl.allSkils track by skill.id"
+                                                ng-class="{'active': $ctrl.tmpEmployeeData.skill === skill.value}">
+                                                <a href="javascript:void(0)"
+                                                   ng-click="$ctrl.setDropdownValue($ctrl.tmpEmployeeData, 'skill', skill.value)">{{skill.value}}</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 form-group">
+                                    <label>Level:</label>
+
+                                    <div class="dropdown">
+                                        <button class="btn btn-default btn-block dropdown-toggle" type="button"
+                                                data-toggle="dropdown">
+                                            <div class="text-right">
+                                                <span class="pull-left">{{$ctrl.tmpEmployeeData.level || 'Please select'}}</span>
+                                                <span class="caret"></span>
+                                            </div>
+                                        </button>
+
+                                        <ul class="dropdown-menu btn-block">
+                                            <li ng-class="{'active': $ctrl.tmpEmployeeData.level === '1'}"
+                                                ng-click="$ctrl.setDropdownValue($ctrl.tmpEmployeeData, 'level', 1)">
+                                                <a href="javascript:void(0)">1</a>
+                                            </li>
+                                            <li ng-class="{'active': $ctrl.tmpEmployeeData.level === '2'}"
+                                                ng-click="$ctrl.setDropdownValue($ctrl.tmpEmployeeData, 'level', 2)">
+                                                <a href="javascript:void(0)">2</a>
+                                            </li>
+                                            <li ng-class="{'active': $ctrl.tmpEmployeeData.level === '3'}"
+                                                ng-click="$ctrl.setDropdownValue($ctrl.tmpEmployeeData, 'level', 3)">
+                                                <a href="javascript:void(0)">3</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <em-button type="submit" icon-type="submit" label="Submit"></em-button>
+                            <em-button type="button" btn-class="btn-default" icon-type="cancel" label="Cancel"
+                                       data-dismiss="modal" ng-click="$ctrl.closeModal()"></em-button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

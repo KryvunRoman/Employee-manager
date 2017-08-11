@@ -1,0 +1,48 @@
+[{"id":0,
+      "name":"Carmen Rodriquez",
+      "age":33,
+      "skill":"JavaScript",
+      "level":"2"
+   },{
+      "id":1,
+      "name":"Brennan Gray",
+      "age":22,
+      "skill":"JavaScript",
+      "level":"2"
+   },
+   {
+      "id":2,
+      "name":"Liam Walters",
+      "age":31,
+      "skill":"Python",
+      "level":"2"
+   },
+   {
+      "id":3,
+      "name":"Denise Kelley",
+      "age":19,
+      "skill":"JavaScript",
+      "level":"3"
+   },
+   {
+      "id":4,
+      "name":"Anita Bates",
+      "age":44,
+      "skill":"C++",
+      "level":"1"
+   },
+   {
+      "id":5,
+      "name":"Eddie Wheeler",
+      "age":21,
+      "skill":"HTML",
+      "level":"3"
+   },
+   {
+      "id":6,
+      "name":"Abigail Washington",
+      "age":67,
+      "skill":"Python",
+      "level":"1"
+   }
+]
